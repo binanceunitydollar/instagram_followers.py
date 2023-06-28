@@ -3,10 +3,10 @@ import instaloader
 loader = instaloader.Instaloader()
 
 # Login to an Instagram account (optional)
-loader.login('your_username', 'your_password')
+loader.login('herrlybag', 'saadsaad')
 
 # Retrieve the profile of the target account
-profile = instaloader.Profile.from_username(loader.context, 'target_username')
+profile = instaloader.Profile.from_username(loader.context, 'girls_anime_dpz')
 
 # Get the followers of the target account
 followers = profile.get_followers()
