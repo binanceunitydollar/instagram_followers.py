@@ -7,7 +7,7 @@ loader = instaloader.Instaloader()
 loader.login('your_username', 'your_password')
 
 # Retrieve the profile of the target account
-target_username = 'target_username'
+target_username = 'dpz_king'
 profile = instaloader.Profile.from_username(loader.context, target_username)
 
 # Get the followers of the target account
