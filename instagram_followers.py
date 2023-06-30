@@ -8,8 +8,8 @@ username = input("Enter your Instagram username: ")
 password = input("Enter your Instagram password: ")
 loader.login(username, password)
 
-# Prompt user to enter the target account username
-target_username = input("dpz_king")
+# Set the target account username
+target_username = 'dpz_king'
 
 try:
     # Retrieve the profile of the target account
