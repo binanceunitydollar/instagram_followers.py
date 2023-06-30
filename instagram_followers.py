@@ -9,7 +9,7 @@ password = input("Enter your Instagram password: ")
 loader.login(username, password)
 
 # Provide the target account username directly
-target_username = "cartoon_dp3"
+target_username = "harveyjoestar"
 
 try:
     # Retrieve the profile of the target account
