@@ -8,14 +8,20 @@ username = input("Enter your Instagram username: ")
 password = input("Enter your Instagram password: ")
 loader.login(username, password)
 
-# Retrieve the profile of the target account
+# Prompt user to enter the target account username
 target_username = input("Enter the target account username: ")
-profile = instaloader.Profile.from_username(loader.context, target_username)
 
-# Get the followers of the target account
-followers = profile.get_followers()
+try:
+    # Retrieve the profile of the target account
+    profile = instaloader.Profile.from_username(loader.context, target_username)
 
-# Rest of the code...
+    # Rest of the code...
+    followers = profile.get_followers()
+    for follower in followers:
+        print(follower.username)
+
+except instaloader.exceptions.ProfileNotExistsException:
+    print("Invalid target account username. Please try again.")
 
 
 
