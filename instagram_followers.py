@@ -10,7 +10,7 @@ loader.login(username, password)
 
 # Retrieve the profile of the target account
 target_username = "target_username"
-profile = instaloader.Profile.from_username(loader.context, target_username)
+profile = instaloader.Profile.from_username(loader.context, dpz_cartoon_)
 
 # Rest of the code...
 
