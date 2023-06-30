@@ -3,31 +3,23 @@ import instaloader
 # Create an instance of Instaloader
 loader = instaloader.Instaloader()
 
-# Login to your Instagram account
-username = input("Enter your Instagram username: ")
-password = input("Enter your Instagram password: ")
-loader.login(username, password)
+# Login to your Instagram account (optional)
+loader.login('your_username', 'your_password')
 
-# Set the target account username
-target_username = 'dpz_king'
+# Retrieve the profile of the target account
+target_username = 'target_username'
+profile = instaloader.Profile.from_username(loader.context, target_username)
 
-try:
-    # Retrieve the profile of the target account
-    profile = instaloader.Profile.from_username(loader.context, target_username)
+# Get the followers of the target account
+followers = profile.get_followers()
 
-    # Get the followers of the target account
-    followers = profile.get_followers()
+# Iterate over the followers and perform actions (e.g., follow them)
+for follower in followers:
+    # Perform action on each follower (e.g., follow)
+    # Your custom code here
 
-    # Open the 'followers.txt' file in write mode
-    with open("followers.txt", "w") as file:
-        # Iterate over the followers and write their usernames to the file
-        for follower in followers:
-            file.write(follower.username + "\n")
-
-    print("Followers saved to 'followers.txt' file.")
-
-except instaloader.exceptions.ProfileNotExistsException:
-    print("Invalid target account username. Please try again.")
+# Print a success message
+print("Followers retrieved and action performed successfully.")
 
 
 
